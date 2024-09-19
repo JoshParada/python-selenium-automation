@@ -30,4 +30,4 @@ def cart_page(context):
 def search_page(context, item):
     context.driver.find_element(By.ID, 'search').send_keys(item)
     context.driver.find_element(By.CSS_SELECTOR, "[data-test='@web/Search/SearchButton']").click()
-    sleep(3)
+    sleep(8)
