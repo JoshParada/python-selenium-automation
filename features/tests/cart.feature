@@ -2,7 +2,7 @@
 Feature: Test for Target empty cart and add item
   # Enter feature description here
 
-  Scenario: User can go to cart
+  Scenario: User can go to empty cart
     Given Open Target main page
     When Go to Cart
     Then Verify cart is empty

@@ -1,16 +1,22 @@
 # Created by parad at 9/17/2024
 Feature: Test for Target search functionality for multiple products
 
-  Scenario: User can search for coffee
+  Scenario: User can search for plates
     Given Open Target main page
     When Search for plates
     Then Verify that results match plates
 
 
-  Scenario: User can search for tea
+  Scenario: User can search for cups
     Given Open Target main page
     When Search for cups
     Then Verify that results match cups
+
+
+Scenario: Verify that user can see product names and images
+    Given Open target main page
+    When Search for AirPods (3rd Generation)
+    Then Verify that every product has a name and an image
 
 
 #  Scenario Outline: User can search for product
