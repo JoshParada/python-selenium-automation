@@ -15,13 +15,7 @@ PRODUCT_IMG = (By.CSS_SELECTOR, 'img')
 
 @when('Add first item to cart')
 def add_first_item(context):
-    #click first item
-    context.driver.wait.until(EC.element_to_be_clickable(FIRST_RESULT_ADD_TO_CART_BTN)).click()
-    #add to cart
-    context.driver.wait.until(EC.element_to_be_clickable(ADD_TO_CART_SIDEBAR_BTN)).click()
-    #close side menu
-    context.driver.wait.until(EC.element_to_be_clickable(CLOSE_SIDEBAR_BTN)).click()
-    sleep(3)
+    context.app.search_results_page.add_first_item()
 
 
 @when('Store product name')
@@ -33,6 +27,11 @@ def store_product_name(context):
 @then('Verify that results match {item}')
 def verify_results(context, item):
     context.app.search_results_page.verify_results(item)
+
+
+@then('Verify product {product} in URL')
+def verify_results_url(context, product):
+    context.app.search_results_page.verify_results_url(product)
 
 
 @then('Verify that every product has a name and an image')

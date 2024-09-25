@@ -13,6 +13,7 @@ Feature: Test for Target empty cart and add item
     When Search for paper towels
     When Add first item to cart
     And Store product name
+    And Add to cart via sidebar
     When Go to Cart
     Then Verify item is in cart
     And Verify cart has correct product

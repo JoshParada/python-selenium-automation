@@ -4,8 +4,4 @@ from time import sleep
 
 @then('Verify Sign In page')
 def verify_sign_in_page(context):
-    actual_result = context.driver.find_element(By.ID, "login").text
-    expected_result = "Sign in with password"
-
-    assert actual_result == expected_result, f'Expected {expected_result}, got {actual_result}'
-    sleep(3)
+    context.app.sign_in_page.verify_sign_in_page()

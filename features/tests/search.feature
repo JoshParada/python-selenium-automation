@@ -5,12 +5,14 @@ Feature: Test for Target search functionality for multiple products
     Given Open Target main page
     When Search for plates
     Then Verify that results match plates
+    Then Verify product coffee in URL
 
 
   Scenario: User can search for cups
     Given Open Target main page
     When Search for cups
     Then Verify that results match cups
+    Then Verify product coffee in URL
 
 
 Scenario: Verify that user can see product names and images
