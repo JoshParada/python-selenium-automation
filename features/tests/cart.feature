@@ -2,6 +2,7 @@
 Feature: Test for Target empty cart and add item
   # Enter feature description here
 
+  @smoke
   Scenario: User can go to empty cart
     Given Open Target main page
     When Go to Cart

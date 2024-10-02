@@ -1,6 +1,7 @@
 # Created by parad at 9/17/2024
 Feature: Test for Target search functionality for multiple products
 
+  @smoke
   Scenario: User can search for plates
     Given Open Target main page
     When Search for plates

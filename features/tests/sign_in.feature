@@ -2,7 +2,7 @@
 Feature: Test for Target sign in
   # Enter feature description here
 
-
+  @smoke
   Scenario: User can sign in via side navigation menu
     Given Open Target main page
     When Go to Sign In
