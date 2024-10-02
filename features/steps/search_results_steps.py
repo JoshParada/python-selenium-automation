@@ -23,6 +23,15 @@ def store_product_name(context):
     context.product_name = context.driver.find_element(*SIDE_NAV_PRODUCT_NAME).text
     print(f'Product stored: {context.product_name}')
 
+@when('Hover favorites icon')
+def hover_favorites(context):
+    context.app.search_results_page.hover_favorites()
+
+
+@then('Favorites tooltip is shown')
+def verify_favorites(context):
+    context.app.search_results_page.verify_favorites()
+
 
 @then('Verify that results match {item}')
 def verify_results(context, item):
